@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color = "success">
+    <ion-buttons slot="start" (click)="goBack()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color = "dark">
+      <p>{{ data.nama_daerah |uppercase }}</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+    <ion-card>
+    <ion-card-content>
+    <b>{{ data.nama_pelapor }}</b>
+    <p>{{ data.dsk }}</p>
+    </ion-card-content>
+    </ion-card>
+   </ion-content>

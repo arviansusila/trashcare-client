@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goBack()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ data.nm_sampah }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let dt of data">
+    <ion-card-content (click)="gotoDetail(dt)">
+      <img [src]="dt.gambar" alt="">
+      <p>{{ dt.nm_sampah }}</p>
+      <p>{{ dt.deskripsi }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

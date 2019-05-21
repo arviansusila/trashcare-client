@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start" (click)="goBack()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark">
+      Daftar Pengaduan Sampah
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="success">
+  <ion-card *ngFor="let dt of data">
+    <ion-item>
+      <span item-left (click)="presentModal(dt)"> {{ dt.nama_daerah |uppercase}}</span>
+      <ion-button (click)="deletedaftar(dt.id_daftar)" slot="end">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>

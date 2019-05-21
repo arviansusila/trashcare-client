@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="dark">
+      Laporan Pengaduan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="success">
+  <br>
+  <br>
+  <br>
+  <ion-item>
+    <ion-label position="floating">Nama Pelapor</ion-label>
+    <ion-input clearInput type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="nama"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nama Daerah</ion-label>
+    <ion-input clearInput type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="daerah"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Deskripsikan Keluhan Anda</ion-label>
+    <ion-input clearInput type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="dsk"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button style="margin: 0 180px" size="small" color="warning" (click)="onSubmit()">Tambah</ion-button>
+</ion-content>

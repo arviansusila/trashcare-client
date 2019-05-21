@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="dark">
+      Search Sampah
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="success">
+  <div style="display: flex; justify-content: center; align-content: center; flex-direction: column; height: 90vh">
+    <form [formGroup]="carisampahForm">
+      <ion-searchbar placeholder="Cari Sampah .. " formControlName="carisampah" [(ngModel)]="data.nm_sampah">
+      </ion-searchbar>
+      <ion-button style="margin: 0 100px" size="small" color="warning" [disabled]="!carisampahForm.valid"
+        (click)="presentModal()">Cari</ion-button>
+    </form>
+
+  </div>
+
+
+</ion-content>

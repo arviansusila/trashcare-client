@@ -1,0 +1,7 @@
+{
+  "name": "sss",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
